@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur de Devises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        select, input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Convertisseur de Devises</h1>
+        <label for="amount">Montant:</label>
+        <input type="number" id="amount" placeholder="Entrer un montant">
+        
+        <label for="fromCurrency">De:</label>
+        <select id="fromCurrency">
+            <option value="USD">USD - Dollar américain</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="XAF">XAF - Franc CFA</option>
+            <!-- Ajoutez d'autres devises si nécessaire -->
+        </select>
+        
+        <label for="toCurrency">À:</label>
+        <select id="toCurrency">
+            <option value="USD">USD - Dollar américain</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="XAF">XAF - Franc CFA</option>
+            <!-- Ajoutez d'autres devises si nécessaire -->
+        </select>
+        
+        <button onclick="convertCurrency()">Convertir</button>
+        <div id="result"></div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
